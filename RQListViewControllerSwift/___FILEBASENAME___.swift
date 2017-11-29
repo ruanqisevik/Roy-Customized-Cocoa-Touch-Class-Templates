@@ -9,31 +9,31 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
     //MARK: define constants
     let reuseIdentifier = "reuseIdentifier"
     
-    //MARK: initialize
+    //MARK: initialize and configuration
     
+    /*
+     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+     // Do any additional setup after initialize.
+     }
+     
+     required init?(coder aDecoder: NSCoder) {
+     fatalError("init(coder:) has not been implemented")
+     }
+     */
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    func setupList() {
         self.list = UITableView.init(frame: CGRect.init(origin: CGPoint.zero, size: UIScreen.main.bounds.size))
-        
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
         self.list.delegate = self
         self.list.dataSource = self
-        
-        self.list.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-        
-        // Do any additional setup after initialize.
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     
     //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupList()
         
+        self.view.addSubview(self.list)
         // Do any additional setup after loading the view.
     }
     
