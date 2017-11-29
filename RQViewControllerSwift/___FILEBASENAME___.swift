@@ -61,14 +61,19 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     //MARK: event response
+    
+    
+    //MARK: notification
     
     
     //MARK: private methods
     
     
     //MARK: getters and setters
-    
+}
 
+//MARK: custom delegate
+extension ___FILEBASENAMEASIDENTIFIER___: <#Your customize delegate#> {
+    
 }

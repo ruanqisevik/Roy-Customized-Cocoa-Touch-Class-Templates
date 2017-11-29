@@ -4,7 +4,7 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
     //MARK: define variable
-    var list: UITableView
+    lazy var list: UITableView = initList()
     
     //MARK: define constants
     let reuseIdentifier = "reuseIdentifier"
@@ -22,16 +22,9 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
      }
      */
     
-    func setupList() {
-        self.list = UITableView.init(frame: CGRect.init(origin: CGPoint.zero, size: UIScreen.main.bounds.size))
-        self.list.delegate = self
-        self.list.dataSource = self
-    }
-    
     //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupList()
         
         self.view.addSubview(self.list)
         // Do any additional setup after loading the view.
@@ -75,7 +68,13 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
     
     
     //MARK: getters and setters
-    
+    func initList() -> UITableView {
+        let list = UITableView.init(frame: CGRect.init(origin: CGPoint.zero, size: UIScreen.main.bounds.size))
+        list.delegate = self
+        list.dataSource = self
+        
+        return list
+    }
     
 }
 
