@@ -37,25 +37,25 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
         // Do any additional setup before view appears.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // Do any additional setup after view appears.
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        // Do any additional setup after view appears.
+//    }
     
-    /*
-     override func viewWillDisappear(_ animated: Bool) {
-     super.viewWillAppear(animated)
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+    // Do any additional setup before view disappears.
+    }
      
-     // Do any additional setup before view disappears.
-     }
-     
-     override func viewDidDisappear(_ animated: Bool) {
-     super.viewDidAppear(animated)
-     
-     // Do any additional setup after view disappears.
-     }
-     */
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//
+//    // Do any additional setup after view disappears.
+//    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
